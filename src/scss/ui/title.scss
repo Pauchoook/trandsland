@@ -1,0 +1,52 @@
+.title {
+  margin: 0;
+  font-family: "RoadRadio", sans-serif;
+  text-transform: uppercase;
+}
+.title-2 {
+  font-size: 52px;
+  @include laptop {
+    font-size: 46px;
+  }
+  @include laptop-min {
+    font-size: 34px;
+  }
+  @include tablet {
+    font-size: 25px;
+  }
+}
+
+.title-v-2 {
+  font-size: 48px;
+  @include laptop {
+    font-size: 46px;
+  }
+  @include laptop-min {
+    font-size: 34px;
+  }
+  @include tablet {
+    font-size: 25px;
+  }
+}
+
+.title-3 {
+  font-size: 39px;
+  @include laptop-min {
+    font-size: 34px;
+  }
+  @include tablet {
+    font-size: 25px;
+  }
+}
+
+.title-5 {
+  font-weight: 400;
+  font-size: 24px;
+  @include laptop-min {
+    font-size: 18px;
+  }
+  @include tablet {
+    font-size: 16px;
+    line-height: 112%;
+  }
+}

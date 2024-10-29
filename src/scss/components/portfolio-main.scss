@@ -1,0 +1,204 @@
+.portfolio-main {
+  overflow: hidden;
+  padding: 52px 0px 100px 0px;
+  @include tablet {
+    padding: 32px 0px 52px 0px;
+  }
+  &__head {
+    @include flex-between;
+    gap: 16px;
+    max-width: 1610px;
+    margin-left: auto;
+    margin-bottom: 52px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    @include tablet {
+      gap: 12px;
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+    a {
+      display: block;
+      font-size: 14px;
+      line-height: 112%;
+      text-transform: uppercase;
+      padding: 16px 24px;
+      background-color: var(--cat-skill);
+      border-radius: 40px;
+      border: 1px solid transparent;
+      transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+      @include hover {
+        border-color: var(--main-dark);
+      }
+      &.active {
+        border-color: var(--main-dark);
+        color: var(--main-dark);
+      }
+      @include tablet {
+        font-size: 12px;
+        padding: 13px 20px;
+      }
+    }
+  }
+  &__head-btn {
+    max-width: 185px;
+    flex-shrink: 0;
+    span {
+      text-align: start;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__item {
+    display: flex;
+    gap: 40px;
+    @include laptop-min {
+      gap: 25px;
+    }
+    @include tablet {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__item-img {
+    width: 455px;
+    height: 325px;
+    border-radius: 12px;
+    object-fit: cover;
+    @include laptop-min {
+      width: 305px;
+      height: 195px;
+    }
+    @include tablet {
+      width: 345px;
+      height: 245px;
+      margin: 0 auto;
+    }
+  }
+  &__item-info {
+  }
+  &__item-date {
+    display: block;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 129%;
+    text-transform: uppercase;
+    color: var(--main-dark);
+    border-radius: 40px;
+    padding: 4px 16px 4px 16px;
+    background-color: var(--cat-skill);
+    margin-bottom: 10px;
+  }
+  &__item-title {
+    max-width: 320px;
+    margin-bottom: 20px;
+    @include tablet {
+      max-width: 285px;
+    }
+  }
+  &__descr-title {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 115%;
+    color: var(--gull);
+    margin-bottom: 15px;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include laptop-min {
+      font-size: 16px;
+    }
+  }
+  &__item-descr {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 115%;
+    max-width: 935px;
+    margin: 0px 0px 22px 0px;
+    @include laptop-min {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    max-width: 205px;
+    @include tablet {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+  &__pagination {
+    display: flex;
+    gap: 15px;
+    margin-top: 52px;
+    @include tablet {
+      margin-top: 32px;
+    }
+  }
+  &__pagination-btn {
+    @include flex-center;
+    cursor: pointer;
+    border: none;
+    width: 62px;
+    height: 62px;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: rgba(241, 245, 249, 0.44);
+    border-radius: 50%;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--main-dark);
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__pagination-next {
+    @include flex-center;
+    cursor: pointer;
+    border: none;
+    padding: 15px 32px;
+    height: 62px;
+    gap: 20px;
+    border-radius: 32px;
+    background-color: rgba(241, 245, 249, 0.44);
+    margin-left: auto;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--main-dark);
+    }
+    @include tablet {
+      max-width: 350px;
+      width: 100%;
+      margin: 0 auto;
+      color: var(--raven);
+      background-color: transparent;
+      border: 1px solid var(--cadet);
+      span {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+  &__pagination-arrow {
+    width: 12px;
+    height: 12px;
+    transform: rotate(90deg);
+  }
+}

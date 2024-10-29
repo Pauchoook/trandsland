@@ -1,0 +1,105 @@
+.not-found {
+  padding-top: 107px;
+  padding-bottom: 38px;
+  @include tablet {
+    padding-top: 75px;
+    padding-bottom: 52px;
+  }
+  &__body {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    padding: 72px 0px;
+    background-color: var(--cat-skill);
+    z-index: 1;
+    @include laptop-middle {
+      padding: 52px 0px;
+    }
+    @include tablet {
+      padding: 32px 0px;
+    }
+    .container {
+      @include flex-between;
+      flex-direction: column;
+      padding: 0 24px;
+      height: 100%;
+    }
+  }
+  &__head {
+    @include laptop-middle {
+      margin-bottom: 24px;
+    }
+  }
+  &__menu {
+    position: absolute;
+    top: 72px;
+    left: 190px;
+    @include desktop {
+      left: 40px;
+    }
+    @include laptop-middle {
+      position: static;
+      margin-bottom: 32px;
+    }
+  }
+  &__title {
+    font-weight: 100;
+    color: var(--gull);
+    margin-bottom: 20px;
+    @include tablet {
+      margin-bottom: 16px;
+    }
+  }
+  &__content {
+    max-width: 770px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+    color: #2c312d;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    width: 1325px;
+    transform: translateX(-50%);
+    z-index: -1;
+    @include laptop-middle {
+      max-width: none;
+      display: block;
+      position: static;
+      width: calc(100% + 48px);
+      transform: translateX(0px);
+    }
+  }
+  &__order-btn {
+    position: absolute;
+    right: 0;
+    top: 280px;
+    max-width: 185px;
+    flex-shrink: 0;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__btn {
+    max-width: 375px;
+    margin-top: 500px;
+    @include laptop {
+      margin-top: 395px;
+    }
+    @include laptop-middle {
+      margin-top: 0;
+    }
+    @include tablet {
+      min-height: 62px;
+    }
+  }
+}

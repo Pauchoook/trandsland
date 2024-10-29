@@ -1,0 +1,157 @@
+.contacts-main {
+  padding: 52px 0px 100px 0px;
+  @include tablet {
+    padding: 32px 0px 52px 0px;
+  }
+  &__head {
+    @include flex-between;
+    margin-left: auto;
+    max-width: 1610px;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 32px;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__head-btn {
+    max-width: 185px;
+    flex-shrink: 0;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 52px;
+    @include desktop-min {
+      gap: 25px;
+    }
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+  &__item {
+    flex: 1;
+    @include laptop {
+      flex: 0 1 300px;
+    }
+    @include mobile {
+      flex-basis: 100%;
+    }
+    a.contacts-main__content {
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--main-dark);
+      }
+    }
+  }
+  &__item-title {
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--gull);
+    margin-bottom: 16px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transform: translateY(-4px);
+  }
+  &__content {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    @include laptop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    span {
+      font-size: 16px;
+      color: var(--raven);
+    }
+  }
+  &__social {
+    .social__btn {
+      width: 40px;
+      height: 40px;
+    }
+    .social__icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__map {
+    position: relative;
+    width: 100%;
+    height: 445px;
+    border-radius: 16px;
+    border: 1px solid var(--main-dark);
+    overflow: hidden;
+    @include tablet {
+      height: 330px;
+      border-radius: 12px;
+    }
+  }
+  &__route {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    @include tablet {
+      position: static;
+      margin-bottom: 38px;
+    }
+  }
+  &__route-body {
+    position: relative;
+    padding: 20px 27px 27px 0px;
+    background-color: white;
+    border-radius: 12px 0px;
+    @include tablet {
+      padding: 0;
+      &::before, &::after {
+        display: none;
+      }
+    }
+    &::before, &::after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 32px;
+      background: url('@img/corner.svg') 0 0 / contain no-repeat;
+      transform: rotate(90deg);
+    }
+    &::before {
+      right: -32px;
+      top: 0;
+    }
+    &::after {
+      left: 0;
+      bottom: -32px;
+    }
+  }
+  &__title {
+    font-weight: 100;
+    font-size: 16px;
+    color: var(--gull);
+    margin-bottom: 16px;
+  }
+  &__route-btns {
+    display: flex;
+    gap: 22px;
+  }
+  &__btn {
+  }
+  &__img {
+  }
+}

@@ -1,0 +1,244 @@
+.calc {
+  overflow: hidden;
+  padding-bottom: 95px;
+  color: white;
+  @include tablet {
+    padding-bottom: 52px;
+  }
+  &__body {
+    position: relative;
+    padding: 90px 30px;
+    border-radius: 16px;
+    background-color: var(--cod);
+    min-height: 720px;
+    z-index: 1;
+    @include desktop-min {
+      .container {
+        padding: 0;
+      }
+    }
+    @include laptop-min {
+      padding: 32px 24px 85px 24px;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 34px;
+    span {
+      font-weight: 100;
+    }
+  }
+  &__content {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--heather);
+    margin: 0px 0px 54px 0px;
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 38px;
+    @include tablet {
+      gap: 24px;
+    }
+  }
+  &__type-car {
+    flex: 0 1 440px;
+    @include desktop {
+      flex-basis: 100%;
+    }
+  }
+  &__type-title {
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--heather);
+    margin-bottom: 20px;
+  }
+  &__type-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 12px;
+    @include tablet {
+      gap: 16px;
+    }
+  }
+  &__radio-label {
+    flex: 0 1 calc(50% - 10px);
+    @include tablet {
+      flex-basis: calc(50% - 8px);
+    }
+  }
+  &__form-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 24px;
+    @include tablet {
+      justify-content: center;
+    }
+  }
+  &__form-item {
+    flex: 0 1 calc(50% - 12px);
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+  &__form-btn {
+    flex: 0 1 calc(50% - 12px);
+    @include tablet {
+      flex-basis: 400px;
+    }
+  }
+  &__policy {
+    margin-left: auto;
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+  &__img {
+    position: absolute;
+    left: 50%;
+    bottom: -330px;
+    transform: translateX(-50%);
+    width: 1430px;
+    z-index: -1;
+    @include desktop {
+      width: 1035px;
+    }
+    @include laptop-min {
+      bottom: -205px;
+    }
+    @include tablet-min {
+      bottom: -115px;
+    }
+    @include mobile-min {
+      bottom: -80px;
+    }
+  }
+  &__footer {
+    position: relative;
+    padding-right: 88px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 300px;
+    @media (max-width: 1459px) {
+      flex-wrap: wrap;
+      padding-right: 0;
+      align-items: center;
+      justify-content: center;
+    }
+    @include laptop-min {
+      margin-top: 195px;
+    }
+    @include tablet-min {
+      margin-top: 110px;
+    }
+  }
+  &__slider {
+    max-width: 1330px;
+    @media (max-width: 1459px) {
+      max-width: none;
+      margin: 0 -20px;
+      padding: 0 20px;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: var(--cat-skill);
+    padding: 42px;
+    min-height: 270px;
+    @include desktop {
+      padding: 30px;
+    }
+    @media (max-width: 1459px) {
+      width: 425px !important;
+    }
+    @include tablet {
+      width: 325px !important;
+      padding: 20px;
+      min-height: auto;
+    }
+  }
+  &__slide-title {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 108%;
+    max-width: 280px;
+    color: var(--black);
+    margin: 0px 0px 15px 0px;
+    @include tablet {
+      font-size: 20px;
+      line-height: 110%;
+    }
+  }
+  &__slide-content {
+    margin: 0;
+    max-width: 290px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--raven);
+    @include tablet {
+      line-height: 125%;
+    }
+  }
+  &__slide-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    left: 42px;
+    right: 42px;
+    bottom: 32px;
+    @include tablet {
+      position: static;
+      margin-top: 20px;
+    }
+  }
+  &__slide-number {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--raven);
+  }
+  &__slide-img {
+    width: 64px;
+    @include tablet {
+      width: 44px;
+    }
+  }
+  &__slider-menu {
+    width: 100%;
+  }
+  &__consultation-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    writing-mode: vertical-rl;
+    max-width: 62px;
+    padding: 6px;
+    transform: rotate(180deg);
+    @media (max-width: 1459px) {
+      transform: rotate(0deg);
+      max-width: 345px;
+      writing-mode: horizontal-tb;
+      position: static;
+      margin-top: 30px;
+      min-height: 61px;
+    }
+    span {
+      text-align: center;
+    }
+    .btn-main__circle {
+      transform: rotate(90deg);
+      @media (max-width: 1459px) {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

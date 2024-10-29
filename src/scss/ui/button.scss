@@ -1,0 +1,124 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+.btn-main {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  padding: 6px 6px 6px 30px;
+  background-color: var(--main-dark);
+  gap: 15px;
+  width: 100%;
+  min-height: 72px;
+
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+
+  &--gray {
+    background-color: var(--cat-skill);
+    color: var(--black);
+    .btn-main__circle {
+      background-color: white;
+    }
+    .btn-main__icon {
+      color: var(--gull);
+    }
+    @include hover {
+      color: white;
+      .btn-main__icon {
+        color: white;
+      }
+    }
+  }
+
+  &._min {
+    font-size: 16px;
+    min-height: 62px;
+    .btn-main__circle {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &._shadow {
+    box-shadow: 0 13px 24px 0 rgba(64, 184, 221, 0.28);
+  }
+
+  @include hover {
+    background-color: var(--main);
+    .btn-main__circle {
+      background-color: var(--main-dark);
+    }
+  }
+  @include tablet {
+    font-size: 18px;
+    gap: 10px;
+    &--gray {
+      font-size: 14px;
+      padding: 4px 4px 4px 18px;
+      .btn-main__circle {
+        width: 42px !important;
+        height: 42px !important;
+      }
+      .btn-main__icon {
+        width: 15px !important;
+        height: 15px !important;
+      }
+    }
+  }
+  span {
+    flex: 1;
+    text-align: center;
+  }
+  &__circle {
+    @include flex-center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color 0.2s ease;
+    @include tablet {
+      width: 52px;
+      height: 52px;
+    }
+  }
+  &__icon {
+    width: 22px;
+    height: 22px;
+    transition: color 0.2s ease;
+  }
+}
+
+.btn-circle {
+  @include flex-center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: var(--cat-skill);
+  color: var(--gull);
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+  @include hover {
+    background-color: var(--main);
+    color: white;
+  }
+  @include tablet {
+    width: 40px;
+    height: 40px;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    @include tablet {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

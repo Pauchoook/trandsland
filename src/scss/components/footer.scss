@@ -1,0 +1,214 @@
+.footer {
+  padding: 24px 0px;
+  @include tablet {
+    padding-bottom: 100px;
+  }
+  @include tablet-min {
+    background-color: var(--cod);
+    border-radius: 16px;
+    .container._min {
+      padding: 0;
+    }
+  }
+  &__body {
+    padding: 52px 0px 30px 0px;
+    background-color: var(--cod);
+    border-radius: 16px;
+    color: white;
+    @include tablet-min {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+  &__container {
+    @include flex-between;
+    @include laptop {
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 32px;
+    }
+    @include tablet-min {
+      gap: 10px;
+      padding: 0;
+    }
+  }
+  &__logo {
+    display: block;
+    @include laptop {
+      max-width: 280px;
+    }
+    @include tablet-min {
+      max-width: none;
+    }
+  }
+  &__logo-img {
+    width: 400px;
+    @include tablet-min {
+      width: 320px;
+    }
+  }
+  &__logo-content {
+    font-weight: 300;
+    margin: 12px 0px 0px 0px;
+    font-size: 18px;
+    color: var(--gull);
+    @include tablet-min {
+      font-size: 14px;
+    }
+  }
+  &__nav {
+    @include laptop-min {
+      flex: 0 1 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    @include desktop {
+      gap: 20px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      gap: 0px;
+    }
+    li {
+      @include tablet-min {
+        width: 100%;
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--river);
+        }
+      }
+    }
+    a,
+    span {
+      display: block;
+      font-size: 18px;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--main);
+      }
+      @include tablet-min {
+        font-size: 16px;
+        width: 100%;
+        padding: 24px 0px;
+      }
+    }
+  }
+  &__btn-services {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    @include hover {
+      color: var(--main);
+    }
+    &.active {
+      color: var(--main);
+      &::before {
+        transform: rotate(0deg);
+      }
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 2px;
+      background-color: currentColor;
+      right: 0;
+      transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+    }
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 22px;
+  }
+  &__social-btn {
+    @include flex-center;
+    width: 57px;
+    height: 57px;
+    border: 1px solid var(--gull);
+    color: var(--gull);
+    border-radius: 50%;
+    transition:
+      color 0.2s ease,
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      color: var(--cod);
+      border-color: white;
+      background-color: white;
+    }
+  }
+  &__social-icon {
+    width: 25px;
+    height: 25px;
+  }
+  &__bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-top: 1px solid var(--gull);
+    margin-top: 60px;
+    padding-top: 22px;
+    @include tablet {
+      padding-top: 32px;
+      margin-top: 32px;
+    }
+    a {
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--main);
+      }
+    }
+  }
+  &__bottom-content {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    font-size: 16px;
+    color: var(--gull);
+    @include tablet {
+      font-size: 14px;
+      &:first-child {
+        max-width: 270px;
+      }
+    }
+  }
+  &__studio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include tablet-min {
+      width: 100%;
+      justify-content: space-between;
+      .container {
+        padding: 0;
+      }
+    }
+  }
+  &__studio-content {
+    color: var(--gull);
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-align: right;
+    max-width: 95px;
+    @include tablet-min {
+      max-width: none;
+    }
+  }
+  &__studio-btn {
+    display: block;
+    width: 125px;
+  }
+  &__studio-img {
+    width: 100%;
+  }
+}

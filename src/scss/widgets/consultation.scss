@@ -1,0 +1,203 @@
+.consultation {
+  &__modal-window {
+    max-width: 815px;
+    width: 100%;
+    @include laptop-min {
+      max-width: calc(100% - 32px);
+    }
+  }
+  &__title {
+    max-width: 490px;
+    font-size: 39px;
+    text-align: center;
+    margin: 0px auto 32px auto;
+    span {
+      font-weight: 100;
+    }
+    @include laptop-middle {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    max-width: 475px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 100;
+    margin: 0px auto 32px auto;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    @include tablet {
+      gap: 17px;
+      row-gap: 24px;
+    }
+  }
+  &__radio {
+    &:checked + .consultation__connect-btn {
+      border-color: var(--main-dark);
+      color: var(--main-dark);
+      &--tel {
+        .consultation__connect-circle {
+          background-color: var(--main-dark);
+        }
+      }
+      &--tg {
+        .consultation__connect-circle {
+          background-color: var(--main);
+        }
+        .consultation__connect-icon {
+          color: white;
+        }
+      }
+      &--wh {
+        .consultation__connect-circle {
+          background-color: var(--wh);
+        }
+        .consultation__connect-icon {
+          color: white;
+        }
+      }
+    }
+  }
+  &__connect-btn {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 8px 9px;
+    font-weight: 100;
+    font-size: 18px;
+    border: 1px solid transparent;
+    gap: 15px;
+    flex: 1;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+    @include hover {
+      background-color: rgba(255, 255, 255, 0.06);
+      border-color: var(--main-dark);
+    }
+    &--tel {
+      .consultation__connect-icon {
+        color: white;
+      }
+    }
+    &--tg {
+      .consultation__connect-icon {
+        color: var(--main);
+      }
+    }
+    &--wh {
+      .consultation__connect-icon {
+        color: var(--wh);
+      }
+    }
+    @include tablet {
+      flex-direction: column;
+      padding: 8px 5px 18px 5px;
+      font-size: 12px;
+      border-radius: 40px;
+      gap: 8px;
+      flex: 0 1 85px;
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__connect-circle {
+    @include flex-center;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  &__connect-icon {
+    width: 20px;
+    height: 20px;
+    transition: color 0.2s ease;
+  }
+  &__connect-content {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 9px;
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+  &__form-item {
+    flex: 0 1 calc(50% - 12px);
+    .form__input {
+      height: 72px;
+    }
+    @include tablet {
+      flex-basis: 450px;
+    }
+  }
+  &__btn {
+    flex: 0 1 calc(50% - 12px);
+    @include tablet {
+      flex-basis: 450px;
+    }
+  }
+  &__contacts {
+    margin-top: 25px;
+    display: none;
+    @include tablet {
+      @include flex-between;
+    }
+  }
+  &__tel {
+    font-weight: 300;
+    font-size: 20px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--main-dark);
+    }
+  }
+  &__contacts-content {
+    margin: 0;
+    font-weight: 300;
+    font-size: 11px;
+    color: var(--loblolly);
+  }
+  &__social {
+    display: flex;
+    gap: 16px;
+    li {
+      &:first-child {
+        .consultation__social-icon {
+          color: var(--main);
+          transform: translateX(-2px);
+        }
+      }
+      &:last-child {
+        .consultation__social-icon {
+          color: var(--wh);
+        }
+      }
+    }
+  }
+  &__social-btn {
+    @include flex-center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(236, 250, 255, 0.24);
+  }
+  &__social-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

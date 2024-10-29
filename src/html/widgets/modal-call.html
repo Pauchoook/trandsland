@@ -1,0 +1,33 @@
+<div data-modal="call" class="modal">
+  <div class="modal__overlay">
+    <div class="modal__window call__modal-window">
+      <button class="btn modal__close">
+        <img src="@img/cross.svg" alt="icon" class="modal__close-icon">
+      </button>
+      <h3 class="title call__title"><span>заказать звонок</span> специалисту</h3>
+      <form action="#" class="form call__form">
+        <label for="name-call" class="form__item call-form__item">
+          <input type="text" placeholder="Имя" id="name-call" class="form__input" />
+          <img src="@img/icon-user.svg" alt="icon" class="form__item-icon" />
+        </label>
+        <label for="tel-call" class="form__item call-form__item">
+          <input type="tel" placeholder="+7 000-00-00" id="tel-call" class="form__input" />
+          <img src="@img/icon-phone.svg" alt="icon" class="form__item-icon" />
+        </label>
+        <button class="btn btn-main form__btn">
+          <span>Узнать стоимость</span>
+          <div class="btn-main__circle">
+            <svg class="btn-main__icon">
+              <use xlink:href="img/icons/icons.svg#icon-arrow-double"></use>
+            </svg>
+          </div>
+        </button>
+        <input type="checkbox" id="call-policy" class="form__input-policy" />
+        <label for="call-policy" class="form__btn-policy"
+          >Нажимая на кнопку, Вы даете согласие на
+          <a href="#">обработку персональных данных</a></label
+        >
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+.register {
+  padding: 100px 0px;
+  @include tablet {
+    padding: 52px 0px;
+  }
+  &__title {
+    margin-bottom: 52px;
+    span {
+      font-weight: 100;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    @include tablet {
+      gap: 12px;
+    }
+    li {
+      grid-column: 4 span;
+      @include laptop-middle {
+        grid-column: 6 span;
+      }
+      @include tablet {
+        grid-column: 12 span;
+      }
+    }
+  }
+  &__card {
+    position: relative;
+    display: block;
+    padding: 25px 32px;
+    border-radius: 12px;
+    background-color: var(--cat-skill);
+    min-height: 265px;
+    z-index: 1;
+    @include hover {
+      .register__card-title {
+        color: var(--main);
+      }
+      .btn-main {
+        background-color: var(--main);
+        color: white;
+        &__circle {
+          background-color: var(--main-dark);
+        }
+        &__icon {
+          color: white;
+        }
+      }
+    }
+    @include laptop-min {
+      .btn-main {
+        padding: 0;
+        min-height: auto;
+        span {
+          display: none;
+        }
+        &__circle {
+          background-color: var(--cat-skill);
+        }
+      }
+    }
+    @include tablet {
+      padding: 24px;
+      min-height: 175px;
+    }
+  }
+  &__card-title {
+    margin-bottom: 15px;
+    transition: color 0.2s ease;
+    @include tablet {
+      margin-bottom: 12px;
+    }
+  }
+  &__card-content {
+    margin: 0;
+    max-width: 250px;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--gull);
+    @include tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      max-width: 200px;
+      font-size: 12px;
+    }
+  }
+  &__card-img {
+    position: absolute;
+    width: 195px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include laptop {
+      width: 160px;
+    }
+    @include mobile {
+      width: 135px;
+    }
+  }
+  &__card-corner {
+    left: 0;
+    bottom: 0;
+  }
+}

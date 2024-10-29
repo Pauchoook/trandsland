@@ -1,0 +1,38 @@
+.social {
+  display: flex;
+  gap: 14px;
+  @include tablet {
+    gap: 8px;
+  }
+  &__btn {
+    @include flex-center;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    transition: color .2s ease, background-color .2s ease;
+    &--tg {
+      background-color: var(--tg-bg);
+      color: var(--main);
+      @include hover {
+        color: white;
+        background-color: var(--main);
+      }
+    }
+    &--wh {
+      background-color: var(--wh-bg);
+      color: var(--wh);
+      @include hover {
+        color: white;
+        background-color: var(--wh);
+      }
+    }
+    @include tablet {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &__icon {
+    width: 22px;
+    height: 22px;
+  }
+}

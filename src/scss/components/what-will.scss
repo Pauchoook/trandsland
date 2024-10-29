@@ -1,0 +1,141 @@
+.what-will {
+  &__body {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: var(--cod);
+    padding: 120px 0px;
+    color: white;
+    @include laptop-middle {
+      padding: 80px 0px;
+    }
+    @include tablet {
+      padding: 60px 0px;
+    }
+    .container {
+      padding: 0 20px;
+    }
+  }
+  &__line {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    left: 0;
+    &--top {
+      top: 3px;
+    }
+    &--bottom {
+      bottom: 3px;
+    }
+    @include tablet {
+      gap: 4px;
+      &--top {
+        top: 1px;
+      }
+      &--bottom {
+        bottom: 1px;
+      }
+    }
+
+    span {
+      width: 70px;
+      height: 50px;
+      clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+      background-color: var(--shaft);
+      @include tablet {
+        width: 36px;
+        height: 26px;
+      }
+    }
+  }
+  &__title {
+    max-width: 1090px;
+    margin-bottom: 52px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+    span {
+      font-weight: 100;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin-bottom: 52px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    grid-column: 4 span;
+    border-radius: 16px;
+    padding: 26px;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--shaft-light);
+    &:not(:first-child) {
+      .what-will__number {
+        right: -2px;
+        bottom: 5px;
+      }
+    }
+    @include laptop-middle {
+      padding: 16px;
+    }
+    @include laptop-min {
+      grid-column: 6 span;
+    }
+    @include tablet {
+      grid-column: 12 span;
+    }
+  }
+  &__circle {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--gull);
+    @include tablet {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__number {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    color: var(--shaft);
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 33px;
+  }
+  &__item-title {
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 122%;
+    @include laptop-middle {
+      font-size: 16px;
+    }
+    @include tablet {
+      font-size: 14px;
+      line-height: 129%;
+    }
+  }
+  &__content {
+    max-width: 1355px;
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--heather);
+    @include tablet {
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+}

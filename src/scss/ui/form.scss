@@ -1,0 +1,206 @@
+.form {
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 40px;
+    outline: none;
+    padding: 15px 45px 15px 32px;
+    height: 61px;
+    background-color: rgba(255, 255, 255, 0.06);
+    width: 100%;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 175%;
+    color: white;
+    &::placeholder {
+      color: var(--heather);
+    }
+  }
+  &__item-icon {
+    position: absolute;
+    max-width: 24px;
+    right: 18px;
+  }
+  &__btn {
+    min-height: 61px;
+    @include tablet {
+      font-size: 20px;
+    }
+    span {
+      flex: 1;
+      text-align: center;
+    }
+    .btn-main__circle {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &__input-policy {
+    display: none;
+    &:checked + label {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &__btn-policy {
+    position: relative;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 133%;
+    color: var(--heather);
+    padding-left: 28px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+    }
+    &::before {
+      border: 1px solid var(--gull);
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      width: 8px;
+      height: 8px;
+      background-color: var(--main-dark);
+      top: 4px;
+      left: 4px;
+      display: none;
+    }
+    a {
+      color: var(--raven);
+      margin-left: 3px;
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &__radio {
+    display: none;
+    &:checked + .form__radio-label {
+      &::after {
+        display: block;
+      }
+    }
+  }
+  &__radio-label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 175%;
+    color: var(--heather);
+    padding-left: 42px;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+    }
+    &::before {
+      width: 24px;
+      height: 24px;
+      border: 1px solid var(--gull);
+      left: 0;
+    }
+    &::after {
+      width: 16px;
+      height: 16px;
+      left: 4px;
+      background-color: var(--main-dark);
+      display: none;
+    }
+  }
+  &__input-show {
+    display: none;
+  }
+  &__select {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    &.open {
+      .form__select-btn {
+        border-radius: 20px 20px 0px 0px;
+      }
+      .form__select-list {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px)
+      }
+      .form__select-arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__select-btn {
+    @include flex-between;
+    cursor: pointer;
+    gap: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 40px;
+    outline: none;
+    padding: 15px 25px 15px 35px;
+    height: 61px;
+    background-color: rgba(255, 255, 255, 0.06);
+    width: 100%;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 125%;
+    color: var(--heather);
+    transition: border-radius .4s ease;
+  }
+  &__select-title {
+  }
+  &__select-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    color: white;
+    transition: transform 0.2s ease;
+  }
+  &__select-list {
+    @include scrollbar();
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cod);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 0px 0px 20px 20px;
+    transform: translateY(30px);
+    max-height: 340px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+  }
+  &__select-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 175%;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    color: var(--heather);
+    @include hover {
+      background-color: var(--main);
+      color: white;
+    }
+  }
+}

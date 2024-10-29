@@ -1,0 +1,39 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin text-overflow($lines) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+@mixin scrollbar() {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--main-dark);
+    border-radius: 3px;
+  }
+}

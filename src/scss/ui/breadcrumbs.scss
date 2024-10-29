@@ -1,0 +1,51 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 400px;
+  gap: 20px;
+  @include tablet {
+    gap: 10px;
+    row-gap: 14px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    color: var(--river);
+    &:not(:last-child) {
+      position: relative;
+      padding-right: 27px;
+      @include tablet {
+        padding-right: 17px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 18px;
+        background-color: currentColor;
+        right: 0;
+        transform: rotate(24deg);
+      }
+    }
+    &:last-child {
+      letter-spacing: 0.03em;
+      color: var(--gull);
+    }
+    @include tablet {
+      font-size: 12px;
+    }
+    span {
+      margin-left: 20px;
+    }
+  }
+  a {
+    transition: color .2s ease;
+    @include hover {
+      color: var(--main);
+    }
+  }
+}

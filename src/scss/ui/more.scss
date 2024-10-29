@@ -1,0 +1,13 @@
+.more-btn {
+  display: none;
+  @include tablet-min {
+    display: block;
+    margin-left: auto;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--main);
+    margin-top: 20px;
+  }
+}

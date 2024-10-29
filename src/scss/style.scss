@@ -1,0 +1,67 @@
+@import "./fonts/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+
+// lib
+@import "./lib/swiper";
+@import "./lib/fancybox";
+@import "./lib/modal";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/title";
+@import "./ui/form";
+@import "./ui/slider";
+@import "./ui/corner";
+@import "./ui/more";
+@import "./ui/social";
+@import "./ui/breadcrumbs";
+@import "./ui/show";
+
+// widgets
+@import "./widgets/services";
+@import "./widgets/mobile-menu";
+@import "./widgets/call";
+@import "./widgets/consultation";
+@import "./widgets/success";
+
+// components
+@import "./components/header";
+
+@import "./components/hero";
+@import "./components/our-services";
+@import "./components/about";
+@import "./components/passport";
+@import "./components/about-video";
+@import "./components/safety";
+@import "./components/add-services";
+@import "./components/category";
+@import "./components/calc";
+@import "./components/trials";
+@import "./components/free-consultation";
+@import "./components/contacts";
+@import "./components/hero-simple";
+@import "./components/about-main";
+@import "./components/documentation";
+@import "./components/hero-service";
+@import "./components/about-service";
+@import "./components/register";
+@import "./components/changes-auto";
+@import "./components/questions";
+@import "./components/download";
+@import "./components/conversion";
+@import "./components/portfolio";
+@import "./components/what-will";
+@import "./components/receive-consultation";
+@import "./components/contacts-main";
+@import "./components/requisites";
+@import "./components/portfolio-main";
+@import "./components/not-found";
+
+@import "./components/footer";

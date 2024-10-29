@@ -1,0 +1,96 @@
+.documentation {
+  padding-top: 100px;
+  @include tablet {
+    padding-top: 52px;
+  }
+  &__title {
+    font-weight: 100;
+    margin-bottom: 52px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @include tablet {
+      gap: 13px;
+    }
+  }
+  &__item {
+    flex: 0 1 calc(50% - 12px);
+    @include laptop-middle {
+      flex-basis: 100%;
+    }
+    @include tablet {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 24px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: var(--cat-skill);
+    @include tablet {
+      gap: 16px;
+      padding: 12px 16px;
+    }
+  }
+  &__item-title {
+    display: block;
+    max-width: 430px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 115%;
+    @include tablet-min {
+      font-size: 16px;
+    }
+    @include mobile {
+      font-size: 14px;
+      line-height: 143%;
+    }
+  }
+  &__item-size {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 25px;
+
+    color: var(--gull);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 144%;
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 164%;
+      padding-right: 17px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 54px;
+      right: 0;
+      background-color: rgba(152, 164, 178, 0.32);
+      @include tablet {
+        height: 44px;
+      }
+    }
+  }
+  &__item-icon {
+    width: 34px;
+    @include tablet {
+      width: 20px;
+    }
+  }
+}

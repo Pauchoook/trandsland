@@ -1,0 +1,111 @@
+<div data-modal="consultation" class="modal">
+  <div class="modal__overlay">
+    <div class="modal__window consultation__modal-window">
+      <button class="btn modal__close">
+        <img src="@img/cross.svg" alt="icon" class="modal__close-icon" />
+      </button>
+      <h3 class="title consultation__title"><span>Получите</span> бесплатную консультацию</h3>
+      <p class="consultation__content">Специалист свяжется с вами в течение часа в рабочее время</p>
+      <form action="#" class="form consultation__form">
+        <input
+          type="radio"
+          name="consultation-connect"
+          id="consultation-tel-connect"
+          class="form__radio consultation__radio"
+        />
+        <label
+          for="consultation-tel-connect"
+          class="btn-main consultation__connect-btn consultation__connect-btn--tel"
+        >
+          <div class="consultation__connect-circle">
+            <svg class="consultation__connect-icon">
+              <use xlink:href="img/icons/icons.svg#icon-tel"></use>
+            </svg>
+          </div>
+          <div>
+            <span class="consultation__connect-title">Позвонить</span>
+          </div>
+        </label>
+        <input
+          type="radio"
+          name="consultation-connect"
+          id="consultation-tg-connect"
+          class="form__radio consultation__radio"
+        />
+        <label
+          for="consultation-tg-connect"
+          class="btn-main consultation__connect-btn consultation__connect-btn--tg"
+        >
+          <div class="consultation__connect-circle">
+            <svg class="consultation__connect-icon">
+              <use xlink:href="img/icons/icons.svg#icon-tg"></use>
+            </svg>
+          </div>
+          <div>
+            <span class="consultation__connect-content">Написать в</span>
+            <span class="consultation__connect-title">Telegram</span>
+          </div>
+        </label>
+        <input
+          type="radio"
+          name="consultation-connect"
+          id="consultation-wh-connect"
+          class="form__radio consultation__radio"
+        />
+        <label
+          for="consultation-wh-connect"
+          class="btn-main consultation__connect-btn consultation__connect-btn--wh"
+        >
+          <div class="consultation__connect-circle">
+            <svg class="consultation__connect-icon">
+              <use xlink:href="img/icons/icons.svg#icon-wh"></use>
+            </svg>
+          </div>
+          <div>
+            <span class="consultation__connect-content">Написать в</span>
+            <span class="consultation__connect-title">WhatsApp</span>
+          </div>
+        </label>
+        <label for="tel-call" class="form__item consultation__form-item">
+          <input type="tel" placeholder="+7 000-00-00" id="tel-call" class="form__input" />
+          <img src="@img/icon-phone.svg" alt="icon" class="form__item-icon" />
+        </label>
+        <button class="btn btn-main consultation__btn">
+          <span>Узнать стоимость</span>
+          <div class="btn-main__circle">
+            <svg class="btn-main__icon">
+              <use xlink:href="img/icons/icons.svg#icon-arrow-double"></use>
+            </svg>
+          </div>
+        </button>
+        <input type="checkbox" id="consultation-policy" class="form__input-policy" />
+        <label for="consultation-policy" class="form__btn-policy"
+          >Нажимая на кнопку, Вы даете согласие на
+          <a href="#">обработку персональных данных</a></label
+        >
+      </form>
+      <div class="consultation__contacts">
+        <div>
+          <a href="tel:88005502579" class="consultation__tel">8(800) 550-25-79</a>
+          <p class="consultation__contacts-content">Звонок по России бесплатный</p>
+        </div>
+        <ul class="list consultation__social">
+          <li>
+            <a href="#" target="_blank" class="consultation__social-btn">
+              <svg class="consultation__social-icon">
+                <use xlink:href='img/icons/icons.svg#icon-tg'></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="consultation__social-btn">
+              <svg class="consultation__social-icon">
+                <use xlink:href='img/icons/icons.svg#icon-wh'></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

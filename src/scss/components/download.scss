@@ -1,0 +1,130 @@
+.download {
+  &__body {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0px;
+    background-color: var(--cod);
+    color: white;
+    border-radius: 16px;
+    z-index: 1;
+    @include tablet {
+      padding: 32px 0px;
+    }
+  }
+  &__img {
+    position: absolute;
+    right: 115px;
+    top: -20px;
+    width: 1085px;
+    max-width: none;
+    z-index: -1;
+    @include desktop {
+      width: 800px;
+      right: 50px;
+    }
+    @include laptop {
+      width: 600px;
+      right: -30px;
+      top: auto;
+      bottom: -120px;
+    }
+    @include tablet {
+      width: 550px;
+      right: -40px;
+      top: 180px;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    margin-bottom: 10px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+  &__title {
+    max-width: 645px;
+    span {
+      font-weight: 100;
+    }
+  }
+  &__circle {
+    @include flex-center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    flex-shrink: 0;
+    z-index: 1;
+    @include tablet {
+      width: 125px;
+      height: 125px;
+    }
+  }
+  &__circle-img {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    z-index: -1;
+    @include tablet {
+      width: 105px;
+      height: 105px;
+    }
+  }
+  &__circle-center {
+    @include flex-center;
+    flex-direction: column;
+    background-color: var(--cod);
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    @include tablet {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &__circle-size {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    @include tablet {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+  }
+  &__circle-content {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 114%;
+    max-width: 75px;
+    color: rgba(255, 255, 255, 0.56);
+    @include tablet {
+      max-width: 60px;
+      font-size: 10px;
+    }
+  }
+  &__content {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    max-width: 390px;
+    color: var(--heather);
+    margin: 0px 0px 52px 0px;
+    @include tablet {
+      font-size: 16px;
+      line-height: 175%;
+      max-width: 290px;
+      margin-bottom: 20px;
+    }
+  }
+  &__btn {
+    max-width: 350px;
+    @include tablet {
+      margin: 185px auto 0px auto;
+      min-height: 62px;
+    }
+  }
+}

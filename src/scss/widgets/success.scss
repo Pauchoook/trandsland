@@ -1,0 +1,52 @@
+.success {
+  &__modal-window {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 550px;
+    width: 100%;
+    @include tablet {
+      gap: 24px;
+    }
+  }
+  &__icon {
+    width: 165px;
+  }
+  &__title {
+    font-weight: 400;
+    max-width: 490px;
+    font-size: 39px;
+    text-align: center;
+    @include laptop-middle {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  &__content {
+    font-weight: 100;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    position: static;
+    width: auto;
+    height: auto;
+    @include tablet {
+      .btn-main__circle {
+        width: 49px;
+        height: 49px;
+      }
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

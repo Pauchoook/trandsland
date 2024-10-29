@@ -1,0 +1,306 @@
+.receive-consultation {
+  overflow: hidden;
+  padding-bottom: 355px;
+  @include laptop {
+    padding-bottom: 80px;
+  }
+  @include tablet {
+    padding-bottom: 52px;
+  }
+  &__container {
+    display: flex;
+    gap: 24px;
+    @include laptop {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 140px;
+    }
+  }
+  &__main {
+    position: relative;
+    padding: 52px;
+    border-radius: 16px;
+    background-color: var(--cod);
+    color: white;
+    flex: 0 1 815px;
+    z-index: 1;
+    @include tablet {
+      padding: 32px 26px 72px 26px;
+    }
+  }
+  &__title {
+    margin-bottom: 25px;
+    span {
+      font-weight: 100;
+    }
+  }
+  &__content {
+    max-width: 475px;
+    font-size: 24px;
+    font-weight: 100;
+    margin: 0px 0px 32px 0px;
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 30px;
+      max-width: 265px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @include tablet {
+      justify-content: center;
+      gap: 17px;
+      row-gap: 24px;
+    }
+  }
+  &__radio {
+    &:checked + .receive-consultation__connect-btn {
+      border-color: var(--main-dark);
+      color: var(--main-dark);
+      &--tel {
+        .receive-consultation__connect-circle {
+          background-color: var(--main-dark);
+        }
+      }
+      &--tg {
+        .receive-consultation__connect-circle {
+          background-color: var(--main);
+        }
+        .receive-consultation__connect-icon {
+          color: white;
+        }
+      }
+      &--wh {
+        .receive-consultation__connect-circle {
+          background-color: var(--wh);
+        }
+        .receive-consultation__connect-icon {
+          color: white;
+        }
+      }
+    }
+  }
+  &__connect-btn {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 8px 9px;
+    font-weight: 100;
+    font-size: 18px;
+    border: 1px solid transparent;
+    gap: 15px;
+    flex: 1;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+    @include hover {
+      background-color: rgba(255, 255, 255, 0.06);
+      border-color: var(--main-dark);
+    }
+    &--tel {
+      .receive-consultation__connect-icon {
+        color: white;
+      }
+    }
+    &--tg {
+      .receive-consultation__connect-icon {
+        color: var(--main);
+      }
+    }
+    &--wh {
+      .receive-consultation__connect-icon {
+        color: var(--wh);
+      }
+    }
+    @include tablet {
+      flex-direction: column;
+      padding: 8px 5px 18px 5px;
+      font-size: 12px;
+      border-radius: 40px;
+      gap: 8px;
+      flex: 0 1 85px;
+      span {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &__connect-circle {
+    @include flex-center;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+  &__connect-icon {
+    width: 20px;
+    height: 20px;
+    transition: color 0.2s ease;
+  }
+  &__connect-content {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 9px;
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+  &__form-item {
+    flex: 0 1 calc(50% - 12px);
+    .form__input {
+      height: 72px;
+    }
+    @include tablet {
+      flex-basis: 450px;
+    }
+  }
+  &__btn {
+    flex: 0 1 calc(50% - 12px);
+    @include tablet {
+      flex-basis: 450px;
+    }
+  }
+  &__policy {
+    max-width: 260px;
+    margin: 0px 70px 0px auto;
+    @include tablet {
+      margin: 0;
+    }
+  }
+  &__contacts {
+    margin-top: 20px;
+    @include tablet {
+      @include flex-between;
+      margin-top: 35px;
+    }
+  }
+  &__tel {
+    font-weight: 300;
+    font-size: 22px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--main-dark);
+    }
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__contacts-content {
+    margin: 0;
+    font-weight: 300;
+    font-size: 12px;
+    color: var(--loblolly);
+    @include tablet {
+      font-size: 11px;
+    }
+  }
+  &__social {
+    display: flex;
+    margin-top: 20px;
+    gap: 14px;
+    @include tablet {
+      margin-top: 0;
+    }
+    li {
+      &:first-child {
+        .receive-consultation__social-btn {
+          color: var(--main);
+          @include hover {
+            color: white;
+            background-color: var(--main);
+          }
+        }
+        .receive-consultation__social-icon {
+          transform: translateX(-2px);
+        }
+      }
+      &:last-child {
+        .receive-consultation__social-btn {
+          color: var(--wh);
+          @include hover {
+            color: white;
+            background-color: var(--wh);
+          }
+        }
+      }
+    }
+  }
+  &__social-btn {
+    @include flex-center;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: rgba(236, 250, 255, 0.24);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include tablet {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  &__social-icon {
+    width: 22px;
+    height: 22px;
+  }
+  &__img {
+    position: absolute;
+    width: 1290px;
+    top: 480px;
+    left: 90px;
+    max-width: none;
+    z-index: -1;
+    @include laptop {
+      width: 950px;
+      top: 500px;
+    }
+    @include tablet {
+      top: auto;
+      bottom: -88px;
+      width: 430px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 20px;
+    padding: 52px 42px;
+    background-color: var(--main-dark);
+    color: white;
+    border-radius: 12px;
+    @include laptop {
+      flex: 0 1 540px;
+    }
+    @include tablet {
+      padding: 24px;
+    }
+  }
+  &__list-item {
+    position: relative;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 118%;
+    padding-left: 28px;
+
+    @include desktop-min {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 8px;
+      width: 11px;
+      height: 11px;
+      background: url("@img/circle-double-white.svg") 0 0 / 100% auto no-repeat;
+    }
+  }
+}
