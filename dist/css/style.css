@@ -4438,7 +4438,7 @@ html.with-fancybox body.hide-scrollbar {
   flex-direction: column;
   gap: 20px
 }
-.contacts__item a {
+.contacts__item a.contacts__item-content {
   transition: color .2s ease
 }
 .contacts__item-title {
@@ -8142,7 +8142,7 @@ html.with-fancybox body.hide-scrollbar {
   .free-consultation__tel:hover {
     text-decoration: underline
   }
-  .contacts__item a:hover {
+  .contacts__item a.contacts__item-content:hover {
     color: var(--main-dark)
   }
   .register__card:hover .register__card-title {
