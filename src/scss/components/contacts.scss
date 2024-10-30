@@ -59,6 +59,11 @@
     gap: 20px;
   }
   &__item {
+    &:first-child {
+      .contacts__item-title {
+        margin-bottom: 3px;
+      }
+    }
     a.contacts__item-content {
       transition: color 0.2s ease;
       @include hover {
@@ -81,7 +86,7 @@
     margin: 0;
     font-weight: 300;
     font-size: 20px;
-    line-height: 18px;
+    line-height: 22px;
     @include tablet {
       font-size: 16px;
     }

@@ -4345,7 +4345,7 @@
                     }
                 },
                 breakpoints: {
-                    1460: {
+                    1201: {
                         slidesPerView: 4,
                         spaceBetween: 24
                     }

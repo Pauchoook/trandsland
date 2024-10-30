@@ -1,4 +1,9 @@
 .changes-auto {
+  @include tablet {
+    .container {
+      padding: 0;
+    }
+  }
   &__body {
     display: flex;
     overflow: hidden;
@@ -39,6 +44,7 @@
     }
     @include tablet {
       padding: 0px 16px 32px 16px;
+      // padding: 0;
     }
   }
   &__title {

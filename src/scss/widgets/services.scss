@@ -17,12 +17,15 @@
     visibility: visible;
     z-index: 100;
   }
+  @include laptop {
+    padding-bottom: 100px;
+  }
   @include laptop-middle {
     background-color: white;
   }
   @include tablet {
     top: 74px;
-    padding: 0px 0px 24px 0px;
+    padding-top: 0;
   }
   &__container {
     display: grid;

@@ -96,13 +96,15 @@
   &__radio-label {
     position: relative;
     cursor: pointer;
-    display: flex;
-    align-items: center;
     font-weight: 300;
     font-size: 16px;
     line-height: 175%;
     color: var(--heather);
     padding-left: 42px;
+    @include tablet {
+      line-height: 112%;
+      padding-left: 32px;
+    }
     &::before,
     &::after {
       position: absolute;
@@ -114,13 +116,21 @@
       height: 24px;
       border: 1px solid var(--gull);
       left: 0;
+      top: 2px;
+      @include tablet {
+        top: -3px;
+      }
     }
     &::after {
       width: 16px;
       height: 16px;
       left: 4px;
+      top: 6px;
       background-color: var(--main-dark);
       display: none;
+      @include tablet {
+        top: 1px;
+      }
     }
   }
   &__input-show {

@@ -1,5 +1,8 @@
 .our-services {
   padding: 100px 0px;
+  &--bottom {
+    padding-top: 0 !important;
+  }
   @include tablet {
     padding: 50px 0px;
   }
@@ -91,6 +94,9 @@
         flex-basis: 100%;
       }
     }
+    @include desktop-min {
+      padding: 30px !important;
+    }
     @include laptop-min {
       &:first-child {
         .our-services__item-title {
@@ -132,6 +138,9 @@
     margin-bottom: 20px;
     max-width: 250px;
     transition: color 0.2s ease;
+    @include desktop-min {
+      margin-bottom: 12px !important;
+    }
     @include laptop-min {
       font-size: 18px;
       max-width: 200px;
@@ -139,7 +148,6 @@
     @include tablet {
       font-size: 16px !important;
       line-height: 112%;
-      margin-bottom: 12px !important;
       max-width: 195px !important;
     }
   }

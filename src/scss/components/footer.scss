@@ -202,6 +202,7 @@
     max-width: 95px;
     @include tablet-min {
       max-width: none;
+      text-align: start;
     }
   }
   &__studio-btn {

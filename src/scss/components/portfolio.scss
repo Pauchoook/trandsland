@@ -4,13 +4,22 @@
   @include tablet {
     padding-bottom: 50px;
   }
-  &__title {
+  &__head {
+    @include flex-between;
     margin-bottom: 52px;
     @include tablet {
       margin-bottom: 32px;
     }
+  }
+  &__title {
     span {
       font-weight: 100;
+    }
+  }
+  &__head-btn {
+    max-width: 295px;
+    @include tablet {
+      display: none;
     }
   }
   &__slider {

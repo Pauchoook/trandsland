@@ -2703,8 +2703,6 @@ html.with-fancybox body.hide-scrollbar {
 .form__radio-label {
   position: relative;
   cursor: pointer;
-  display: flex;
-  align-items: center;
   font-weight: 300;
   font-size: 16px;
   line-height: 175%;
@@ -2721,12 +2719,14 @@ html.with-fancybox body.hide-scrollbar {
   width: 24px;
   height: 24px;
   border: 1px solid var(--gull);
-  left: 0
+  left: 0;
+  top: 2px
 }
 .form__radio-label::after {
   width: 16px;
   height: 16px;
   left: 4px;
+  top: 6px;
   background-color: var(--main-dark);
   display: none
 }
@@ -3203,7 +3203,8 @@ html.with-fancybox body.hide-scrollbar {
   font-size: 14px!important;
   padding-left: 15px;
   min-height: 42px;
-  max-width: 180px
+  max-width: 180px;
+  gap: 10px!important
 }
 .mobile-menu__order-btn .btn-main__circle {
   width: 38px;
@@ -3538,9 +3539,6 @@ html.with-fancybox body.hide-scrollbar {
   color: var(--gull);
   transition: color .2s ease
 }
-.header__btn-menu {
-  display: none
-}
 .hero {
   padding-top: 107px;
   color: #fff
@@ -3566,10 +3564,14 @@ html.with-fancybox body.hide-scrollbar {
 .hero__breadcrumbs {
   display: flex;
   max-width: 450px;
+  row-gap: 10px;
   margin: 70px 0
 }
+.hero__breadcrumbs li {
+  color: var(--gull)
+}
 .hero__breadcrumbs li:last-child {
-  color: var(--river)
+  color: var(--gull)
 }
 .hero__img {
   position: absolute;
@@ -3593,7 +3595,7 @@ html.with-fancybox body.hide-scrollbar {
   display: flex;
   align-items: center;
   height: 112px!important;
-  padding: 10px 25px;
+  padding: 10px 10px 10px 25px;
   background-color: hsla(0,0%,100%,.07);
   border-radius: 16px;
   gap: 16px;
@@ -3608,11 +3610,17 @@ html.with-fancybox body.hide-scrollbar {
   color: var(--heather);
   max-width: 220px
 }
+.hero__slider-menu {
+  display: none!important
+}
 .hero__slider-scrollbar {
   background-color: var(--river)
 }
 .our-services {
   padding: 100px 0
+}
+.our-services--bottom {
+  padding-top: 0!important
 }
 .our-services__head {
   display: flex;
@@ -4438,6 +4446,9 @@ html.with-fancybox body.hide-scrollbar {
   flex-direction: column;
   gap: 20px
 }
+.contacts__item:first-child .contacts__item-title {
+  margin-bottom: 3px
+}
 .contacts__item a.contacts__item-content {
   transition: color .2s ease
 }
@@ -4456,7 +4467,7 @@ html.with-fancybox body.hide-scrollbar {
   margin: 0;
   font-weight: 300;
   font-size: 20px;
-  line-height: 18px
+  line-height: 22px
 }
 .contacts__social .social__btn {
   width: 39px;
@@ -4860,6 +4871,7 @@ html.with-fancybox body.hide-scrollbar {
   transition: color .2s ease
 }
 .register__card-content {
+  padding-bottom: 70px;
   margin: 0;
   max-width: 250px;
   font-weight: 300;
@@ -5049,6 +5061,8 @@ html.with-fancybox body.hide-scrollbar {
   position: absolute;
   width: 140px;
   height: 140px;
+  -webkit-animation: rotate 4s linear infinite;
+  animation: rotate 4s linear infinite;
   z-index: -1
 }
 .download__circle-center {
@@ -5083,6 +5097,26 @@ html.with-fancybox body.hide-scrollbar {
 }
 .download__btn {
   max-width: 350px
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+  }
 }
 .conversion {
   padding: 100px 0
@@ -5129,11 +5163,17 @@ html.with-fancybox body.hide-scrollbar {
   overflow: hidden;
   padding-bottom: 100px
 }
-.portfolio__title {
+.portfolio__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 52px
 }
 .portfolio__title span {
   font-weight: 100
+}
+.portfolio__head-btn {
+  max-width: 295px
 }
 .portfolio__slide {
   box-sizing: border-box;
@@ -5469,6 +5509,9 @@ html.with-fancybox body.hide-scrollbar {
 .contacts-main__item {
   flex: 1
 }
+.contacts-main__item:first-child .contacts-main__item-title {
+  margin-bottom: 8px
+}
 .contacts-main__item a.contacts-main__content {
   transition: color .2s ease
 }
@@ -5481,9 +5524,7 @@ html.with-fancybox body.hide-scrollbar {
 .contacts-main__wrapper {
   display: flex;
   align-items: center;
-  gap: 16px;
-  -webkit-transform: translateY(-4px);
-  transform: translateY(-4px)
+  gap: 16px
 }
 .contacts-main__content {
   margin: 0;
@@ -5502,8 +5543,10 @@ html.with-fancybox body.hide-scrollbar {
   width: 16px;
   height: 16px
 }
+.contacts-main__map-wrapper {
+  position: relative
+}
 .contacts-main__map {
-  position: relative;
   width: 100%;
   height: 445px;
   border-radius: 16px;
@@ -5512,8 +5555,8 @@ html.with-fancybox body.hide-scrollbar {
 }
 .contacts-main__route {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: -1px;
   z-index: 10
 }
 .contacts-main__route-body {
@@ -5539,12 +5582,6 @@ html.with-fancybox body.hide-scrollbar {
 .contacts-main__route-body::after {
   left: 0;
   bottom: -32px
-}
-.contacts-main__title {
-  font-weight: 100;
-  font-size: 16px;
-  color: var(--gull);
-  margin-bottom: 16px
 }
 .contacts-main__route-btns {
   display: flex;
@@ -5596,7 +5633,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 .portfolio-main__head {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 16px;
   max-width: 1610px;
@@ -5606,9 +5643,8 @@ html.with-fancybox body.hide-scrollbar {
 .portfolio-main__nav {
   display: flex;
   align-items: center;
-  gap: 14px;
-  white-space: nowrap;
-  overflow-x: auto
+  flex-wrap: wrap;
+  gap: 14px
 }
 .portfolio-main__nav::-webkit-scrollbar {
   width: 0;
@@ -5715,6 +5751,7 @@ html.with-fancybox body.hide-scrollbar {
   padding: 15px 32px;
   height: 62px;
   gap: 20px;
+  color: var(--raven);
   border-radius: 32px;
   background-color: rgba(241,245,249,.44);
   margin-left: auto;
@@ -5992,8 +6029,8 @@ html.with-fancybox body.hide-scrollbar {
     margin: 30px -23px 0 -23px;
     padding: 0 23px
   }
-  .hero__slide {
-    width: 360px!important
+  .hero__slide-title {
+    word-break: break-all
   }
   .about-main__slider {
     margin: 52px -20px 0 -20px;
@@ -6055,6 +6092,12 @@ html.with-fancybox body.hide-scrollbar {
   }
   .our-services__item:first-child {
     flex-basis: 100%
+  }
+  .our-services__item {
+    padding: 30px!important
+  }
+  .our-services__item-title {
+    margin-bottom: 12px!important
   }
   .about__body {
     background-position: right -500px top 0!important
@@ -6158,7 +6201,7 @@ html.with-fancybox body.hide-scrollbar {
     font-size: 18px
   }
   .contacts-main__list {
-    gap: 25px
+    gap: 20px
   }
 }
 @media (max-width:1265px) {
@@ -6168,6 +6211,9 @@ html.with-fancybox body.hide-scrollbar {
   .title-v-2 {
     font-size: 46px
   }
+  .services {
+    padding-bottom: 100px
+  }
   .services__container {
     grid-gap: 15px
   }
@@ -6176,6 +6222,11 @@ html.with-fancybox body.hide-scrollbar {
   }
   .services__item-content {
     max-width: 200px
+  }
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center
   }
   .header__container {
     gap: 15px
@@ -6237,25 +6288,6 @@ html.with-fancybox body.hide-scrollbar {
   }
   .header__btn-call {
     display: none
-  }
-  .header__btn-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    color: var(--gull);
-    gap: 5px;
-    transition: color .2s ease
-  }
-  .header__btn-menu.active {
-    color: var(--main)
-  }
-  .header__btn-menu span {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: currentColor
   }
   .hero__title {
     font-size: 54px
@@ -6347,14 +6379,15 @@ html.with-fancybox body.hide-scrollbar {
     max-width: 280px
   }
 }
-@media (max-width:1265px)and (any-hover:hover) {
-  .header__btn-menu:hover {
-    color: var(--main)
+@media (max-width:1200px) {
+  .hero__slide {
+    width: 360px!important
   }
-}
-@media (max-width:1265px)and (max-width:743px) {
-  .header__btn-menu {
-    display: none
+  .hero__slide-title {
+    word-break: normal
+  }
+  .hero__slider-menu {
+    display: flex!important
   }
 }
 @media (max-width:1109px) {
@@ -6622,6 +6655,9 @@ html.with-fancybox body.hide-scrollbar {
   .register__card .btn-main__circle {
     background-color: var(--cat-skill)
   }
+  .register__card-content {
+    padding-bottom: 40px
+  }
   .changes-auto__img {
     height: 400px
   }
@@ -6730,6 +6766,16 @@ html.with-fancybox body.hide-scrollbar {
   .form__btn {
     font-size: 20px
   }
+  .form__radio-label {
+    line-height: 112%;
+    padding-left: 32px
+  }
+  .form__radio-label::before {
+    top: -3px
+  }
+  .form__radio-label::after {
+    top: 1px
+  }
   .slider-nav__btn {
     width: 44px;
     height: 44px
@@ -6779,7 +6825,7 @@ html.with-fancybox body.hide-scrollbar {
   }
   .services {
     top: 74px;
-    padding: 0 0 24px 0
+    padding-top: 0
   }
   .services__container {
     gap: 0
@@ -6814,11 +6860,6 @@ html.with-fancybox body.hide-scrollbar {
     width: 20px;
     height: 20px;
     color: var(--gull)
-  }
-  .mobile-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center
   }
   .call__title {
     font-size: 24px
@@ -6920,11 +6961,7 @@ html.with-fancybox body.hide-scrollbar {
     margin: 25px 0 0 0
   }
   .hero__breadcrumbs li {
-    font-size: 14px;
-    color: var(--gull)
-  }
-  .hero__breadcrumbs li:last-child {
-    color: var(--gull)
+    font-size: 14px
   }
   .hero__img {
     position: static
@@ -6976,7 +7013,6 @@ html.with-fancybox body.hide-scrollbar {
   .our-services__item-title {
     font-size: 16px!important;
     line-height: 112%;
-    margin-bottom: 12px!important;
     max-width: 195px!important
   }
   .our-services__item-price {
@@ -7132,11 +7168,14 @@ html.with-fancybox body.hide-scrollbar {
   .calc {
     padding-bottom: 52px
   }
+  .calc__content {
+    display: none
+  }
   .calc__form {
     gap: 24px
   }
   .calc__type-wrapper {
-    gap: 16px
+    gap: 14px
   }
   .calc__radio-label {
     flex-basis: calc(50% - 8px)
@@ -7248,6 +7287,10 @@ html.with-fancybox body.hide-scrollbar {
   .free-consultation__btn {
     font-size: 16px;
     min-height: 62px
+  }
+  .free-consultation__btn .btn-main__icon {
+    width: 16px;
+    height: 16px
   }
   .free-consultation__contacts {
     align-items: center;
@@ -7435,6 +7478,9 @@ html.with-fancybox body.hide-scrollbar {
   .register {
     padding: 52px 0
   }
+  .register__title {
+    margin-bottom: 24px
+  }
   .register__list {
     gap: 12px
   }
@@ -7449,7 +7495,11 @@ html.with-fancybox body.hide-scrollbar {
     margin-bottom: 12px
   }
   .register__card-content {
-    font-size: 14px
+    font-size: 14px;
+    line-height: 105%
+  }
+  .changes-auto .container {
+    padding: 0
   }
   .changes-auto__body {
     gap: 30px
@@ -7569,8 +7619,11 @@ html.with-fancybox body.hide-scrollbar {
   .portfolio {
     padding-bottom: 50px
   }
-  .portfolio__title {
+  .portfolio__head {
     margin-bottom: 32px
+  }
+  .portfolio__head-btn {
+    display: none
   }
   .portfolio__slider {
     overflow: visible
@@ -7717,12 +7770,19 @@ html.with-fancybox body.hide-scrollbar {
   .contacts-main__list {
     margin-bottom: 32px
   }
+  .contacts-main__item:first-child {
+    margin-bottom: 4px
+  }
+  .contacts-main__item-title {
+    margin-bottom: 12px
+  }
   .contacts-main__content {
     font-size: 16px
   }
   .contacts-main__map {
     height: 330px;
-    border-radius: 12px
+    border-radius: 12px;
+    border-left: none
   }
   .contacts-main__route {
     position: static;
@@ -7759,7 +7819,13 @@ html.with-fancybox body.hide-scrollbar {
   .portfolio-main {
     padding: 32px 0 52px 0
   }
+  .portfolio-main__head {
+    margin-bottom: 32px
+  }
   .portfolio-main__nav {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
     gap: 12px;
     margin: 0 -20px;
     padding: 0 20px
@@ -7781,7 +7847,8 @@ html.with-fancybox body.hide-scrollbar {
     margin: 0 auto
   }
   .portfolio-main__item-title {
-    max-width: 285px
+    max-width: 285px;
+    font-size: 20px!important
   }
   .portfolio-main__btn {
     max-width: 350px;
@@ -7943,7 +8010,8 @@ html.with-fancybox body.hide-scrollbar {
     padding: 0
   }
   .footer__studio-content {
-    max-width: none
+    max-width: none;
+    text-align: start
   }
 }
 @media (max-width:479px) {
@@ -8005,6 +8073,11 @@ html.with-fancybox body.hide-scrollbar {
   }
   .free-consultation__rect:nth-child(3) {
     width: 42px
+  }
+}
+@media (max-width:360px) {
+  .header__tel {
+    font-size: 14px
   }
 }
 @media (hover:hover) {

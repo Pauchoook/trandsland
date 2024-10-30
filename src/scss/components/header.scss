@@ -156,6 +156,9 @@
     @include tablet {
       font-size: 16px;
     }
+    @media (max-width: 360px) {
+      font-size: 14px;
+    }
   }
   &__contacts-content {
     margin: 0;
@@ -258,31 +261,5 @@
     height: 20px;
     color: var(--gull);
     transition: color 0.2s ease;
-  }
-  &__btn-menu {
-    display: none;
-    @include laptop {
-      @include flex-center;
-      width: 30px;
-      height: 30px;
-      color: var(--gull);
-      gap: 5px;
-      transition: color 0.2s ease;
-      @include hover {
-        color: var(--main);
-      }
-      &.active {
-        color: var(--main);
-      }
-      @include tablet {
-        display: none;
-      }
-      span {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background-color: currentColor;
-      }
-    }
   }
 }

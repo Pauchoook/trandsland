@@ -11,7 +11,7 @@
   padding: 12px 0px;
   height: 74px;
   z-index: 100;
-  @include tablet {
+  @include laptop {
     @include flex-center;
   }
   &__btn {
@@ -88,6 +88,7 @@
     padding-left: 15px;
     min-height: 42px;
     max-width: 180px;
+    gap: 10px !important;
     .btn-main__circle {
       width: 38px;
       height: 38px;
